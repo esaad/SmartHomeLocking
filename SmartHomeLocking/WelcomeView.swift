@@ -13,9 +13,10 @@ class WelcomeView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-       let yourImage = UIImage(named: "planet.png")
-       let imageview = UIImageView(image: yourImage)
-        self.view.addSubview(imageview)
+//       let yourImage = UIImage(named: "planet.png")
+//       let imageview = UIImageView(image: yourImage)
+//        imageview.sizeToFit()
+//        self.view.addSubview(imageview)
 
         // Do any additional setup after loading the view.
     }

@@ -30,6 +30,7 @@
 		76DDBE691A9B3666000174F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DDBE681A9B3666000174F0 /* Main.storyboard */; };
 		76DDBE6B1A9B3B38000174F0 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DDBE6A1A9B3B38000174F0 /* UserViewController.swift */; };
 		76DF9D981A9BBADD006C54C3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DF9D971A9BBADD006C54C3 /* CoreBluetooth.framework */; };
+		76E8963B1AA1819A00799A60 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E8963A1AA1819A00799A60 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		76DDBE681A9B3666000174F0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		76DDBE6A1A9B3B38000174F0 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		76DF9D971A9BBADD006C54C3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		76E8963A1AA1819A00799A60 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				76CB28291A9B0D1600784B1C /* AppDelegate.swift */,
 				76DDBE681A9B3666000174F0 /* Main.storyboard */,
+				76E8963A1AA1819A00799A60 /* WelcomeView.swift */,
 				76DDBE6A1A9B3B38000174F0 /* UserViewController.swift */,
 				76CB282B1A9B0D1600784B1C /* ViewController.swift */,
 				76CB286F1A9B22B100784B1C /* SignUpVC.swift */,
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76CB28701A9B22B100784B1C /* SignUpVC.swift in Sources */,
+				76E8963B1AA1819A00799A60 /* WelcomeView.swift in Sources */,
 				76DDBE6B1A9B3B38000174F0 /* UserViewController.swift in Sources */,
 				76CB282C1A9B0D1600784B1C /* ViewController.swift in Sources */,
 				76CB282A1A9B0D1600784B1C /* AppDelegate.swift in Sources */,
