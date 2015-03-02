@@ -239,9 +239,11 @@
 				TargetAttributes = {
 					76CB28231A9B0D1600784B1C = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 3PL4B5KPD5;
 					};
 					76CB28381A9B0D1600784B1C = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 3PL4B5KPD5;
 						TestTargetID = 76CB28231A9B0D1600784B1C;
 					};
 				};
@@ -443,6 +445,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -454,6 +458,7 @@
 				INFOPLIST_FILE = SmartHomeLockingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartHomeLocking.app/SmartHomeLocking";
 			};
 			name = Debug;
@@ -462,6 +467,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -469,6 +476,7 @@
 				INFOPLIST_FILE = SmartHomeLockingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartHomeLocking.app/SmartHomeLocking";
 			};
 			name = Release;

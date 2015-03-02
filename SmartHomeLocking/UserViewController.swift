@@ -14,20 +14,28 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     @IBOutlet weak var verbositySelector: UISegmentedControl!
     
     @IBOutlet weak var valueLabel: UILabel!
-    @IBOutlet weak var listdevices: UILabel!
+   // @IBOutlet weak var listdevices: UILabel!
     
-    var cManager = CBCentralManager()
+    
+    @IBOutlet weak var listDevice: UILabel!
+    
+    var cManager:CBCentralManager!
     var discoveredPeripheral = CBPeripheral()
     
     var bluetoothOn = false
     
-//func verboseMode -> Bool {return self.verbositySelector.selectedSegmentIndex!=0}
+//    func verboseMode() -> Bool
+//    
+//    {
+//    
+//       // return self.verbositySelector.selectedSegmentIndex; !=0
+//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
             bluetoothOn = false
-        cManager = CBCentralManager(delegate: self, queue: nil)
+        self.cManager = CBCentralManager(delegate: self, queue: nil)
 
         // Do any additional setup after loading the view.
     }
@@ -37,16 +45,22 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func scanble(sender: AnyObject) {
+        
+        if (bluetoothOn == true) {
+            println("scan button pressed")
+            if (cManager.state == CBCentralManagerState.PoweredOn) {
+                cManager.scanForPeripheralsWithServices(nil , options: [CBCentralManagerScanOptionAllowDuplicatesKey:true])
+                println("inside scan")
+            }
+        }
+        else {
+            
+            println("bluetooth is off")
+        }}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func centralManagerDidUpdateState(central: CBCentralManager!) {
         if central.state != CBCentralManagerState.PoweredOn {
             
@@ -64,26 +78,12 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         
-        listdevices.text = "\(advertisementData)" + "\(RSSI)"
-        self.discoveredPeripheral = peripheral
+        listDevice.text = "Discovered \(advertisementData.description)" + "\(RSSI.description)"
         
           
     }
     
-
-    @IBAction func scanble(sender: AnyObject) {
-        
-        if (bluetoothOn == true) {
-        cManager.scanForPeripheralsWithServices(nil , options: nil)
-    }
-        else {
-        
-        println("bluetooth is off")
-        }}
     
-    override func viewWillAppear(animated: Bool) {
-        self.navigationItem.hidesBackButton = true
-    }
 
     @IBAction func logoutBtnClick(sender: AnyObject) {
         
@@ -92,6 +92,11 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         
         self.navigationController!.pushViewController(self.storyboard!.instantiateViewControllerWithIdentifier("root") as UIViewController, animated: true)
         
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationItem.hidesBackButton = true
     }
 
 }

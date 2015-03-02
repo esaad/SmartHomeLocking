@@ -188,12 +188,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="listDevice" destination="yqF-f0-YFW" id="vdJ-bR-Mrg"/>
                         <outlet property="verbositySelector" destination="MPm-kk-hLM" id="lGK-mf-C9L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlQ-DA-GiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="614" y="937"/>
+            <point key="canvasLocation" x="1686" y="1113"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Qfv-Uy-pmH">
