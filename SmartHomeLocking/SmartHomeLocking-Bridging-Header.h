@@ -5,5 +5,5 @@
 #import <Parse/Parse.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-#define SERVICE_UUID @ "FFF0"
-#define CHARACTERISTIC_UUID "FFF3"  
+#define SERVICE_UUID @ "FFE0"
+#define CHARACTERISTIC_UUID "FFF3"

@@ -20,15 +20,15 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     @IBOutlet weak var listDevice: UILabel!
     
     var cManager:CBCentralManager!
-    var discoveredPeripheral = CBPeripheral()
+    var discoveredPeripheral:CBPeripheral!
     
     var bluetoothOn = false
     
-//    func verboseMode() -> Bool
+//    func verboseMode()
 //    
 //    {
 //    
-//       // return self.verbositySelector.selectedSegmentIndex; !=0
+//        return self.verbositySelector.selectedSegmentIndex
 //    }
     
     
@@ -51,7 +51,7 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         if (bluetoothOn == true) {
             println("scan button pressed")
             if (cManager.state == CBCentralManagerState.PoweredOn) {
-                cManager.scanForPeripheralsWithServices(nil , options: [CBCentralManagerScanOptionAllowDuplicatesKey:true])
+                cManager.scanForPeripheralsWithServices(nil , options: [CBCentralManagerScanOptionAllowDuplicatesKey:false])
                 println("inside scan")
             }
         }
@@ -75,15 +75,24 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     }
     
     
-    
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         
         listDevice.text = "Discovered \(advertisementData.description)" + "\(RSSI.description)"
+      discoveredPeripheral = peripheral
+        println("This is peripheral \(peripheral) " )
         
-          
+        
+        if (self.verbositySelector.selectedSegmentIndex == 0) {
+            println("inside 1")
+            cManager.connectPeripheral(peripheral, options: nil)
+        }
     }
     
-    
+    func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!) {
+        
+        peripheral.delegate = self
+        
+    }
 
     @IBAction func logoutBtnClick(sender: AnyObject) {
         
