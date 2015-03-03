@@ -207,7 +207,7 @@
                         <outlet property="listDevice" destination="yqF-f0-YFW" id="vdJ-bR-Mrg"/>
                         <outlet property="stateLabel" destination="9bM-Nd-NDd" id="4E5-Wg-4bc"/>
                         <outlet property="verbositySelector" destination="MPm-kk-hLM" id="lGK-mf-C9L"/>
-                        <segue destination="ENY-cH-o6A" kind="push" identifier="ControlCenter" id="6zU-kz-yCi"/>
+                        <segue destination="ENY-cH-o6A" kind="push" identifier="ControlCenter" id="D7U-Cs-Qhy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlQ-DA-GiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -227,26 +227,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6S-AT-3fx">
-                                <rect key="frame" x="56" y="141" width="42" height="21"/>
+                                <rect key="frame" x="46" y="302" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XsW-yP-b5H">
-                                <rect key="frame" x="241" y="136" width="51" height="31"/>
-                            </switch>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LK9-fY-665">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="qWX-kv-d4b">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uGg-dX-e0H">
-                                            <connections>
-                                                <segue destination="EEo-C2-eDv" kind="push" id="DWa-Eq-Y65"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NG3-pC-mJy">
+                                <rect key="frame" x="106" y="176" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EEo-C2-eDv" kind="push" id="HjW-zG-cC0"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XsW-yP-b5H">
+                                <rect key="frame" x="227" y="292" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -255,8 +255,9 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lex-bT-N4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Sam-If-ots"/>
             </objects>
-            <point key="canvasLocation" x="2194" y="1113"/>
+            <point key="canvasLocation" x="2227" y="1113"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Qfv-Uy-pmH">
@@ -340,6 +341,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="DWa-Eq-Y65"/>
+        <segue reference="HjW-zG-cC0"/>
     </inferredMetricsTieBreakers>
 </document>

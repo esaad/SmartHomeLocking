@@ -15,8 +15,7 @@ class ControlCenterController: UserViewController  {
     var timerTXDelay: NSTimer?
     var allowTX = true
     var lastPosition: UInt8 = 255
-   
-    
+       
     func timerTXDelayElapsed() {
         self.allowTX = true
         self.stopTimerTXDelay()
