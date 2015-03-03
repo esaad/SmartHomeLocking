@@ -244,8 +244,11 @@
                                     <segue destination="EEo-C2-eDv" kind="push" id="HjW-zG-cC0"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XsW-yP-b5H">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XsW-yP-b5H">
                                 <rect key="frame" x="227" y="292" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switch:" destination="ENY-cH-o6A" eventType="valueChanged" id="3jF-Vm-igH"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -253,6 +256,9 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uu7-b2-h8W"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="switchState" destination="XsW-yP-b5H" id="tsw-nw-O4l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lex-bT-N4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="Sam-If-ots"/>

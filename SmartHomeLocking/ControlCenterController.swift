@@ -35,6 +35,8 @@ class ControlCenterController: UserViewController  {
     
     // Valid position range: 0 to 180
     func sendPosition(position: UInt8) {
+        
+        println("inside sendPOstinon")
         // 1
         if !allowTX {
             return
@@ -54,6 +56,7 @@ class ControlCenterController: UserViewController  {
         // Send position to BLE Shield (if service exists and is connected)
        
             writePosition(position)
+            println("ran writePostion")
             lastPosition = position
             
             // 5
@@ -73,6 +76,7 @@ class ControlCenterController: UserViewController  {
     func writePosition(position: UInt8) {
         // See if characteristic has been discovered before writing to it
         if self.positionCharacteristic == nil {
+            println("inside write position1")
             return
         }
         
@@ -80,18 +84,34 @@ class ControlCenterController: UserViewController  {
         var positionValue = position
         let data = NSData(bytes: &positionValue, length: sizeof(UInt8))
         discoveredPeripheral.writeValue(data, forCharacteristic: self.positionCharacteristic, type: CBCharacteristicWriteType.WithResponse)
+        println("inside write position2")
     }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        sendPosition(50)
+        
         // Do any additional setup after loading the view.
     }
 
     
+    @IBOutlet weak var switchState: UISwitch!
     
+    @IBAction func `switch`(sender: UISwitch) {
+        
+        if switchState.on {
+            sendPosition(100)
+            println("inside switch on")
+        }
+        else {
+            sendPosition(180)
+            println("inside switch off")
+        }
+    }
     
     
     
