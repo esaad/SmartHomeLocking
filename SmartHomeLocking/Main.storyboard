@@ -235,10 +235,24 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XsW-yP-b5H">
                                 <rect key="frame" x="241" y="136" width="51" height="31"/>
                             </switch>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LK9-fY-665">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="qWX-kv-d4b">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uGg-dX-e0H">
+                                            <connections>
+                                                <segue destination="EEo-C2-eDv" kind="push" id="DWa-Eq-Y65"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="uu7-b2-h8W"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lex-bT-N4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,6 +340,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cEk-ej-WVN"/>
+        <segue reference="DWa-Eq-Y65"/>
     </inferredMetricsTieBreakers>
 </document>
