@@ -214,10 +214,10 @@
             </objects>
             <point key="canvasLocation" x="1686" y="1113"/>
         </scene>
-        <!--View Controller-->
+        <!--Control Center Controller-->
         <scene sceneID="FWv-58-l6B">
             <objects>
-                <viewController id="ENY-cH-o6A" sceneMemberID="viewController">
+                <viewController id="ENY-cH-o6A" customClass="ControlCenterController" customModule="SmartHomeLocking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JYf-rh-ISy"/>
                         <viewControllerLayoutGuide type="bottom" id="Mkl-9T-qsI"/>

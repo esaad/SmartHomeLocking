@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		765CD7721AA580B10015649E /* ControlCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CD7711AA580B10015649E /* ControlCenterController.swift */; };
 		76CB282A1A9B0D1600784B1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CB28291A9B0D1600784B1C /* AppDelegate.swift */; };
 		76CB282C1A9B0D1600784B1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CB282B1A9B0D1600784B1C /* ViewController.swift */; };
 		76CB28311A9B0D1600784B1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76CB28301A9B0D1600784B1C /* Images.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		765CD7711AA580B10015649E /* ControlCenterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlCenterController.swift; sourceTree = "<group>"; };
 		76CB28241A9B0D1600784B1C /* SmartHomeLocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHomeLocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CB28281A9B0D1600784B1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76CB28291A9B0D1600784B1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				76CB28291A9B0D1600784B1C /* AppDelegate.swift */,
 				76DDBE681A9B3666000174F0 /* Main.storyboard */,
+				765CD7711AA580B10015649E /* ControlCenterController.swift */,
 				76E8963A1AA1819A00799A60 /* WelcomeView.swift */,
 				76DDBE6A1A9B3B38000174F0 /* UserViewController.swift */,
 				76CB282B1A9B0D1600784B1C /* ViewController.swift */,
@@ -296,6 +299,7 @@
 				76E8963B1AA1819A00799A60 /* WelcomeView.swift in Sources */,
 				76DDBE6B1A9B3B38000174F0 /* UserViewController.swift in Sources */,
 				76CB282C1A9B0D1600784B1C /* ViewController.swift in Sources */,
+				765CD7721AA580B10015649E /* ControlCenterController.swift in Sources */,
 				76CB282A1A9B0D1600784B1C /* AppDelegate.swift in Sources */,
 				76CB286A1A9B1BDD00784B1C /* SmartHomeLockingHeader.m in Sources */,
 			);

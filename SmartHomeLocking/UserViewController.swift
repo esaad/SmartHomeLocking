@@ -10,7 +10,11 @@ import UIKit
 import CoreBluetooth
 
 
-class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate{
+class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
+    
+    let PositionCharUUID = "FFE1"
+    let BLEServiceUUID = "FFE0"
+    
     
     @IBOutlet weak var verbositySelector: UISegmentedControl!
     
@@ -28,7 +32,7 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     var discoveredPeripheral:CBPeripheral!
     var test = false
     var bluetoothOn = false
-    
+    var positionCharacteristic: CBCharacteristic?
     //    func verboseMode()
     //
     //    {
@@ -144,9 +148,16 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
             return
         }
         
-        let characteristic = service.characteristics as [CBService]
+        let characteristic = service.characteristics
         
         /* come */
+        
+//        if service.UUID == PositionCharUUID {
+//            self.positionCharacteristic = (characteristic as CBCharacteristic)
+//            peripheral.setNotifyValue(true, forCharacteristic: characteristic as CBCharacteristic)
+//            
+//        }
+//    
     }
     
     @IBAction func logoutBtnClick(sender: AnyObject) {
@@ -162,5 +173,4 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.hidesBackButton = true
     }
-    
 }
