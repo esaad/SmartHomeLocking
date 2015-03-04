@@ -8,13 +8,17 @@
 
 import UIKit
 import CoreBluetooth
-let PositionCharUUID = "FFE1"
-let BLEServiceUUID = "FFE0"
+
 
 class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     
     let BLEServiceChangedStatusNotification = "kBLEServiceChangedStatusNotification"
+    let BLEServiceUUID=CBUUID(string: "FFE0")
+    let PositionCharUUID=CBUUID(string: "FFE1")
+    
+    
+    
     
     @IBOutlet weak var verbositySelector: UISegmentedControl!
     
@@ -104,7 +108,7 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         
         listDevice.text = peripheral.name
         stateLabel.text = advertisementData.description
-        discoveredPeripheral = peripheral
+       discoveredPeripheral = peripheral
         
         
         
@@ -118,9 +122,10 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     }
     func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!) {
         
+        //discoveredPeripheral = peripheral
         peripheral.delegate = self
         peripheral.discoverServices([BLEServiceUUID])
-
+        
         
     }
 //    
