@@ -173,26 +173,6 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         }
     }
     
-//    func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
-//        
-//        if ((error) != nil) {
-//            
-//            println("error in didDisconverCharac")
-//            return
-//        }
-//        
-//        let characteristic = service.characteristics
-//        
-//        /* come */
-//        
-//        if service.UUID == PositionCharUUID {
-//            self.positionCharacteristic = (CBCharacteristic)()
-//            peripheral.setNotifyValue(true, forCharacteristic: characteristic as CBCharacteristic)
-//            peripheral.setNotifyValue(true, forCharacteristic: characteristic)
-//        }
-//    
-//    }
-    
     
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
@@ -216,6 +196,36 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
             }
         }
     }
+    
+    func peripheral(peripheral: CBPeripheral!, didUpdateNotificationStateForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
+        if (error != nil) {
+            
+            println("encountered error in didupdatenotification")
+            return
+        }
+        
+        if (characteristic.isNotifying) {
+            
+            println("notification began on \(characteristic)")
+        }
+        
+    }
+    
+    
+    func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
+        if (error != nil) {
+            
+            println("error in didUpdatevalue")
+            return
+        }
+        
+        if (characteristic.value != nil) {
+            
+            println("this is not nil")
+            
+        }
+    }
+    
     
     
     func sendBTServiceNotificationWithIsBluetoothConnected(isBluetoothConnected: Bool) {
