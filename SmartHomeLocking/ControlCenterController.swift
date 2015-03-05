@@ -75,8 +75,8 @@ class ControlCenterController: UserViewController  {
     
     func writePosition(position: UInt8) {
         // See if characteristic has been discovered before writing to it
-        if self.positionCharacteristic == nil {
-            println("inside write position1")
+        if  self.positionCharacteristic == nil {
+            println("position characteristic is nil \(positionCharacteristic)")
             return
         }
         

@@ -188,8 +188,9 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         
         for characteristic in service.characteristics {
             if characteristic.UUID == PositionCharUUID {
-                self.positionCharacteristic = (characteristic as CBCharacteristic)
-                println("inside SCENE ONN")
+                self.positionCharacteristic = characteristic as? CBCharacteristic
+                println("inside SCENE -> \(positionCharacteristic)")
+                peripheral.readValueForCharacteristic(positionCharacteristic)
                 peripheral.setNotifyValue(true, forCharacteristic: characteristic as CBCharacteristic)
                 // Send notification that Bluetooth is connected and all required characteristics are discovered
                 self.sendBTServiceNotificationWithIsBluetoothConnected(true)
@@ -221,7 +222,7 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         
         if (characteristic.value != nil) {
             
-            println("this is not nil")
+            println("characteristic value has changed to \(characteristic.value)")
             
         }
     }
