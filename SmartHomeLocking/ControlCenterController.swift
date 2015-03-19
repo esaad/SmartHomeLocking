@@ -10,7 +10,7 @@ import UIKit
 import CoreBluetooth
 
 
-class ControlCenterController: UserViewController  {
+class ControlCenterController: UIViewController  {
 
     var timerTXDelay: NSTimer?
     var allowTX = true
@@ -75,7 +75,7 @@ class ControlCenterController: UserViewController  {
     
     func writePosition(position: UInt8) {
         // See if characteristic has been discovered before writing to it
-        if  self.positionCharacteristic == nil {
+        if  positionCharacteristic == nil {
             println("position characteristic is nil \(positionCharacteristic)")
             return
         }
@@ -83,8 +83,9 @@ class ControlCenterController: UserViewController  {
         // Need a mutable var to pass to writeValue function
         var positionValue = position
         let data = NSData(bytes: &positionValue, length: sizeof(UInt8))
-        discoveredPeripheral.writeValue(data, forCharacteristic: self.positionCharacteristic, type: CBCharacteristicWriteType.WithResponse)
-        println("inside write position2")
+        discoveredPeripheral.writeValue(data, forCharacteristic: positionCharacteristic, type: CBCharacteristicWriteType.WithResponse)
+        println("inside write position2 --->  \(positionCharacteristic)")
+        println("writing position2 ---> \(positionValue)")
     }
     
     

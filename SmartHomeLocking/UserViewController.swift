@@ -9,7 +9,8 @@
 import UIKit
 import CoreBluetooth
 
-
+var positionCharacteristic:CBCharacteristic?
+var discoveredPeripheral:CBPeripheral!
 class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     
@@ -34,10 +35,10 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     
     var cManager:CBCentralManager!
    // var peripheral:CBPeripheral!
-    var discoveredPeripheral:CBPeripheral!
+    //
     var test = false
     var bluetoothOn = false
-    var positionCharacteristic:CBCharacteristic?
+   // var positionCharacteristic:CBCharacteristic?
     //    func verboseMode()
     //
     //    {
@@ -148,7 +149,7 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
         let uuidsForBTService = PositionCharUUID
         
-        if (peripheral != self.discoveredPeripheral) {
+        if (peripheral != discoveredPeripheral) {
             // Wrong Peripheral
             println("wrong peripheral")
             return
@@ -162,7 +163,8 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         
         if ((peripheral.services == nil) || (peripheral.services.count == 0)) {
             // No Services
-            println("lol")
+            println("peripheral services ---> \(peripheral.services)")
+            println("peripher services count ---> \(peripheral.services.count)")
             return
         }
         
@@ -176,9 +178,9 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
-        if (peripheral != self.discoveredPeripheral) {
+        if (peripheral != discoveredPeripheral) {
             // Wrong Peripheral
-            println("inside NO SCENE ONE" )
+            println("inside NO SCENE" )
             return
         }
         
@@ -188,9 +190,10 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         
         for characteristic in service.characteristics {
             if characteristic.UUID == PositionCharUUID {
-                self.positionCharacteristic = characteristic as? CBCharacteristic
+                positionCharacteristic = characteristic as? CBCharacteristic
                 println("inside SCENE -> \(positionCharacteristic)")
                 peripheral.readValueForCharacteristic(positionCharacteristic)
+                /* subscribe to characteristics */
                 peripheral.setNotifyValue(true, forCharacteristic: characteristic as CBCharacteristic)
                 // Send notification that Bluetooth is connected and all required characteristics are discovered
                 self.sendBTServiceNotificationWithIsBluetoothConnected(true)
