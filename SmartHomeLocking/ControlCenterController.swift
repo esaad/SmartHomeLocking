@@ -10,7 +10,7 @@ import UIKit
 import CoreBluetooth
 
 
-class ControlCenterController: UIViewController  {
+class ControlCenterController: UserViewController  {
 
     var timerTXDelay: NSTimer?
     var allowTX = true
@@ -73,20 +73,20 @@ class ControlCenterController: UIViewController  {
     }
     
     
-    func writePosition(position: UInt8) {
-        // See if characteristic has been discovered before writing to it
-        if  positionCharacteristic == nil {
-            println("position characteristic is nil \(positionCharacteristic)")
-            return
-        }
-        
-        // Need a mutable var to pass to writeValue function
-        var positionValue = position
-        let data = NSData(bytes: &positionValue, length: sizeof(UInt8))
-        discoveredPeripheral.writeValue(data, forCharacteristic: positionCharacteristic, type: CBCharacteristicWriteType.WithResponse)
-        println("inside write position2 --->  \(positionCharacteristic)")
-        println("writing position2 ---> \(positionValue)")
-    }
+//    func writePosition(position: UInt8) {
+//        // See if characteristic has been discovered before writing to it
+//        if  positionCharacteristic == nil {
+//            println("position characteristic is nil \(positionCharacteristic)")
+//            return
+//        }
+//        
+//        // Need a mutable var to pass to writeValue function
+//        var positionValue = position
+//        let data = NSData(bytes: &positionValue, length: sizeof(UInt8))
+//        discoveredPeripheral.writeValue(data, forCharacteristic: positionCharacteristic, type: CBCharacteristicWriteType.WithoutResponse)
+//        println("inside write position2 --->  \(positionCharacteristic)")
+//        println("writing position2 ---> \(positionValue)")
+//    }
     
     
     
@@ -94,7 +94,7 @@ class ControlCenterController: UIViewController  {
         super.viewDidLoad()
         
         
-        sendPosition(50)
+        sendPosition(100)
         
         // Do any additional setup after loading the view.
     }
@@ -109,7 +109,7 @@ class ControlCenterController: UIViewController  {
             println("inside switch on")
         }
         else {
-            sendPosition(180)
+            sendPosition(105)
             println("inside switch off")
         }
     }

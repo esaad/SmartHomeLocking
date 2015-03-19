@@ -231,6 +231,35 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     }
     
     
+    func writePosition(position: UInt8) {
+        // See if characteristic has been discovered before writing to it
+        if  positionCharacteristic == nil {
+            println("position characteristic is nil \(positionCharacteristic)")
+            return
+        }
+        
+        // Need a mutable var to pass to writeValue function
+        var positionValue = position
+        let data = NSData(bytes: &positionValue, length: sizeof(UInt8))
+        discoveredPeripheral.writeValue(data, forCharacteristic: positionCharacteristic, type: CBCharacteristicWriteType.WithoutResponse)
+        println("inside write position2 --->  \(positionCharacteristic)")
+        println("writing position2 ---> \(positionValue)")
+    }
+    
+    
+    
+    
+    
+    
+     func peripheral(peripheral: CBPeripheral!, didWriteValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
+       
+        if ((error) != nil) {
+            println("error not nill")
+            println("\(error)")
+            return
+        }
+        
+    }
     
     func sendBTServiceNotificationWithIsBluetoothConnected(isBluetoothConnected: Bool) {
         let connectionDetails = ["isConnected": isBluetoothConnected]
