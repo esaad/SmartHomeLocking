@@ -11,6 +11,8 @@ import CoreBluetooth
 
 var positionCharacteristic:CBCharacteristic?
 var discoveredPeripheral:CBPeripheral!
+
+
 class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     
@@ -19,26 +21,15 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     let PositionCharUUID=CBUUID(string: "FFE1")
     
     
-    
-    
     @IBOutlet weak var verbositySelector: UISegmentedControl!
-    
-    // @IBOutlet weak var stateLabel: UILabel!
-    //@IBOutlet weak var listdevices: UILabel!
-    
-    
     @IBOutlet weak var stateLabel: UILabel!
-    
-    //   @IBOutlet weak var listBLE: UITableView!
-    
     @IBOutlet weak var listDevice: UILabel!
     
     var cManager:CBCentralManager!
-   // var peripheral:CBPeripheral!
-    //
     var test = false
     var bluetoothOn = false
-   // var positionCharacteristic:CBCharacteristic?
+
+    
     //    func verboseMode()
     //
     //    {
@@ -92,7 +83,10 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     
     @IBOutlet weak var connectDevice: UIButton!
     @IBAction func connectDeviceClick(sender: UIButton!) {
+        
+        
         if (test == true) {
+            
             self.performSegueWithIdentifier("ControlCenter", sender: self)
             return
         }
@@ -102,6 +96,7 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         }
         
     }
+   
     
     func centralManager(central: CBCentralManager!, didDiscoverPeripheral peripheral: CBPeripheral!, advertisementData: [NSObject : AnyObject]!, RSSI: NSNumber!) {
         
@@ -109,7 +104,7 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         
         listDevice.text = peripheral.name
         stateLabel.text = advertisementData.description
-       discoveredPeripheral = peripheral
+        discoveredPeripheral = peripheral
         
         
         
@@ -129,22 +124,6 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         
         
     }
-//    
-//    func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
-//        if ((error) != nil) {
-//            println("error in discovery services")
-//            return
-//        }
-//        
-//        let services = peripheral.services as [CBService]
-//        
-//        for s in services {
-//            
-//            peripheral.discoverCharacteristics(nil, forService: s)
-//            
-//        }
-//        
-//    }
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
         let uuidsForBTService = PositionCharUUID
@@ -248,9 +227,6 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     
     
     
-    
-    
-    
      func peripheral(peripheral: CBPeripheral!, didWriteValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
        
         if ((error) != nil) {
@@ -281,5 +257,6 @@ class UserViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.hidesBackButton = true
+        
     }
 }

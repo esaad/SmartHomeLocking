@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wj1-qJ-Xq3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wj1-qJ-Xq3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,9 +20,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planet" translatesAutoresizingMaskIntoConstraints="NO" id="0ei-uK-e02">
                                 <rect key="frame" x="0.0" y="-6" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to continue..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-kI-wpy">
-                                <rect key="frame" x="115" y="487" width="189" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to continue..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-kI-wpy">
+                                <rect key="frame" x="66" y="490" width="189" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -30,14 +30,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="QeY-kI-wpy" firstAttribute="trailing" secondItem="gNK-gs-h02" secondAttribute="trailingMargin" id="DTB-th-Ckq"/>
-                            <constraint firstItem="QeY-kI-wpy" firstAttribute="top" secondItem="V6H-fV-Lkg" secondAttribute="bottom" constant="423" id="IYT-8b-I9Z"/>
-                            <constraint firstItem="iSi-Ou-8RK" firstAttribute="top" secondItem="QeY-kI-wpy" secondAttribute="bottom" constant="60" id="SrZ-5r-9sq"/>
-                            <constraint firstItem="QeY-kI-wpy" firstAttribute="leading" secondItem="gNK-gs-h02" secondAttribute="leadingMargin" constant="99" id="WKS-Wl-b2h"/>
+                            <constraint firstItem="QeY-kI-wpy" firstAttribute="centerX" secondItem="0ei-uK-e02" secondAttribute="centerX" id="6bY-SW-97z"/>
+                            <constraint firstItem="iSi-Ou-8RK" firstAttribute="top" secondItem="QeY-kI-wpy" secondAttribute="bottom" constant="57" id="Lel-ya-AtH"/>
+                            <constraint firstItem="QeY-kI-wpy" firstAttribute="top" secondItem="V6H-fV-Lkg" secondAttribute="bottom" constant="426" id="Tks-GS-b4l"/>
                             <constraint firstItem="iSi-Ou-8RK" firstAttribute="top" secondItem="0ei-uK-e02" secondAttribute="bottom" constant="6" id="bXX-lE-Er6"/>
                             <constraint firstItem="0ei-uK-e02" firstAttribute="leading" secondItem="gNK-gs-h02" secondAttribute="leading" id="dsh-kC-E4B"/>
                             <constraint firstAttribute="trailing" secondItem="0ei-uK-e02" secondAttribute="trailing" id="odk-JV-Kl2"/>
                             <constraint firstItem="0ei-uK-e02" firstAttribute="top" secondItem="gNK-gs-h02" secondAttribute="topMargin" constant="-6" id="psI-Cb-cLr"/>
+                            <constraint firstItem="QeY-kI-wpy" firstAttribute="leading" secondItem="gNK-gs-h02" secondAttribute="leadingMargin" constant="50" id="q8G-Gg-1f8"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="5Tf-uX-tBZ" appends="YES" id="rQA-CN-vXG"/>
@@ -68,23 +68,24 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkO-Me-FGS">
                                 <rect key="frame" x="108" y="111" width="94" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ilp-xg-9id">
                                 <rect key="frame" x="33" y="168" width="245" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vpM-6s-Qqo">
                                 <rect key="frame" x="33" y="230" width="245" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aql-hu-Zsu">
                                 <rect key="frame" x="115" y="303" width="94" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,6 +96,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgM-63-1FK">
                                 <rect key="frame" x="102" y="507" width="107" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Sign Up!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -104,7 +106,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3N8-6p-Nfd">
                                 <rect key="frame" x="33" y="473" width="245" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -157,57 +159,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-3h-fk1">
-                                <rect key="frame" x="16" y="80" width="46" height="30"/>
-                                <state key="normal" title="Scan">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-3h-fk1">
+                                <rect key="frame" x="104" y="406" width="116" height="30"/>
+                                <state key="normal" title="Scan &amp; Connect">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="scanble:" destination="EEo-C2-eDv" eventType="touchUpInside" id="e7S-xg-FmD"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MPm-kk-hLM">
-                                <rect key="frame" x="64" y="134" width="196" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqF-f0-YFW">
+                                <rect key="frame" x="11" y="164" width="284" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="DTa-5I-SHB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bM-Nd-NDd">
+                                <rect key="frame" x="11" y="334" width="288" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="IMH-8e-mpO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SmartHome Locking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtT-FE-QOD">
+                                <rect key="frame" x="64" y="504" width="196" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eYw-gY-Hbl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MPm-kk-hLM">
+                                <rect key="frame" x="64" y="41" width="196" height="29"/>
                                 <segments>
                                     <segment title="Devices"/>
                                     <segment title="All"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtT-FE-QOD">
-                                <rect key="frame" x="20" y="422" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xi6-fh-bNv">
-                                <rect key="frame" x="218" y="427" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqF-f0-YFW">
-                                <rect key="frame" x="20" y="151" width="284" height="115"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RSSI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bM-Nd-NDd">
-                                <rect key="frame" x="16" y="295" width="288" height="62"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQb-8f-gCp">
-                                <rect key="frame" x="16" y="358" width="116" height="30"/>
-                                <state key="normal" title="Connect">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQb-8f-gCp">
+                                <rect key="frame" x="104" y="444" width="116" height="30"/>
+                                <state key="normal" title="Control Center">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="connectDeviceClick:" destination="EEo-C2-eDv" eventType="touchUpInside" id="9nA-mC-6aK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDp-D4-m5j">
+                                <rect key="frame" x="16" y="108" width="65" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Bkf-2r-A5R"/>
+                                    <constraint firstAttribute="width" constant="65" id="dFa-he-N9p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdvData" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ge9-TA-V3q">
+                                <rect key="frame" x="16" y="264" width="111" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gS3-Gm-jZa"/>
+                                    <constraint firstAttribute="width" constant="111" id="jpX-w5-yOc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ge9-TA-V3q" firstAttribute="top" secondItem="yqF-f0-YFW" secondAttribute="bottom" constant="54" id="1ov-Yr-whJ"/>
+                            <constraint firstItem="1sl-3h-fk1" firstAttribute="top" secondItem="9bM-Nd-NDd" secondAttribute="bottom" constant="23" id="4hV-BO-9I3"/>
+                            <constraint firstItem="MPm-kk-hLM" firstAttribute="trailing" secondItem="PtT-FE-QOD" secondAttribute="trailing" id="5bl-sZ-jfG"/>
+                            <constraint firstItem="UQb-8f-gCp" firstAttribute="leading" secondItem="1sl-3h-fk1" secondAttribute="leading" id="64w-Jm-g6U"/>
+                            <constraint firstItem="UQb-8f-gCp" firstAttribute="trailing" secondItem="1sl-3h-fk1" secondAttribute="trailing" id="9yJ-4g-A6d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yqF-f0-YFW" secondAttribute="trailing" constant="9" id="FNw-w8-W07"/>
+                            <constraint firstItem="MPm-kk-hLM" firstAttribute="leading" secondItem="PtT-FE-QOD" secondAttribute="leading" id="G75-zI-hoy"/>
+                            <constraint firstItem="9bM-Nd-NDd" firstAttribute="top" secondItem="Ge9-TA-V3q" secondAttribute="bottom" constant="49" id="NU0-6j-o0n"/>
+                            <constraint firstItem="Ge9-TA-V3q" firstAttribute="leading" secondItem="t1G-s0-k2y" secondAttribute="leadingMargin" id="Nt8-Mr-fLV"/>
+                            <constraint firstItem="1sl-3h-fk1" firstAttribute="centerX" secondItem="PtT-FE-QOD" secondAttribute="centerX" id="PBg-CO-eDR"/>
+                            <constraint firstItem="cDp-D4-m5j" firstAttribute="leading" secondItem="Ge9-TA-V3q" secondAttribute="leading" id="W1L-Te-Jog"/>
+                            <constraint firstItem="yqF-f0-YFW" firstAttribute="leading" secondItem="t1G-s0-k2y" secondAttribute="leadingMargin" constant="-5" id="XZz-XV-Hv2"/>
+                            <constraint firstItem="yqF-f0-YFW" firstAttribute="top" secondItem="cDp-D4-m5j" secondAttribute="bottom" constant="35" id="aTh-D7-X2A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9bM-Nd-NDd" secondAttribute="trailing" constant="5" id="dWQ-Ky-5Ka"/>
+                            <constraint firstItem="UQb-8f-gCp" firstAttribute="top" secondItem="1sl-3h-fk1" secondAttribute="bottom" constant="8" symbolic="YES" id="exA-Gi-wvG"/>
+                            <constraint firstItem="PtT-FE-QOD" firstAttribute="leading" secondItem="t1G-s0-k2y" secondAttribute="leadingMargin" constant="48" id="fY0-f6-cI7"/>
+                            <constraint firstItem="1sl-3h-fk1" firstAttribute="leading" secondItem="t1G-s0-k2y" secondAttribute="leadingMargin" constant="88" id="i5Y-Eb-yFi"/>
+                            <constraint firstItem="MPm-kk-hLM" firstAttribute="top" secondItem="aEX-wJ-Vlu" secondAttribute="bottom" constant="21" id="ihV-YD-V0D"/>
+                            <constraint firstAttribute="bottom" secondItem="9bM-Nd-NDd" secondAttribute="bottom" constant="185" id="j9t-id-U6b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PtT-FE-QOD" secondAttribute="trailing" constant="44" id="p4c-nw-LGS"/>
+                            <constraint firstItem="yqF-f0-YFW" firstAttribute="leading" secondItem="9bM-Nd-NDd" secondAttribute="leading" id="qol-dD-cUn"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="PtT-FE-QOD" secondAttribute="bottom" constant="43" id="zpM-MH-ju5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BLE Connect" id="fQ2-4l-Olz">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="ySO-dz-feO">
@@ -240,9 +288,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6S-AT-3fx">
-                                <rect key="frame" x="46" y="302" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lock/Unlock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6S-AT-3fx">
+                                <rect key="frame" x="33" y="237" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -250,8 +298,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NG3-pC-mJy">
-                                <rect key="frame" x="106" y="176" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="33" y="105" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -259,7 +308,7 @@
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XsW-yP-b5H">
-                                <rect key="frame" x="227" y="292" width="51" height="31"/>
+                                <rect key="frame" x="229" y="237" width="51" height="31"/>
                                 <connections>
                                     <action selector="switch:" destination="ENY-cH-o6A" eventType="valueChanged" id="3jF-Vm-igH"/>
                                 </connections>
@@ -277,7 +326,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lex-bT-N4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="Sam-If-ots"/>
             </objects>
-            <point key="canvasLocation" x="2227" y="1113"/>
+            <point key="canvasLocation" x="2635" y="915"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Qfv-Uy-pmH">
@@ -293,22 +342,23 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VS6-AB-ftc">
                                 <rect key="frame" x="42" y="123" width="236" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JgX-Fz-xIR">
                                 <rect key="frame" x="42" y="187" width="236" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhe-cO-wYV">
                                 <rect key="frame" x="42" y="253" width="236" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hP-XV-Std">
                                 <rect key="frame" x="99" y="356" width="122" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
