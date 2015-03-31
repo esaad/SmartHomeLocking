@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wj1-qJ-Xq3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wj1-qJ-Xq3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -288,17 +288,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lock/Unlock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6S-AT-3fx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock/Unlock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6S-AT-3fx">
                                 <rect key="frame" x="33" y="237" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fmh-nj-vvT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LK9-fY-665">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LK9-fY-665">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NG3-pC-mJy">
-                                <rect key="frame" x="33" y="105" width="46" height="30"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XsW-yP-b5H">
+                                <rect key="frame" x="229" y="237" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switch:" destination="ENY-cH-o6A" eventType="valueChanged" id="3jF-Vm-igH"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock/Unlock" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kin-zj-5OZ">
+                                <rect key="frame" x="33" y="338" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Rma-pq-z0h"/>
+                                    <constraint firstAttribute="width" constant="100" id="mrC-KQ-xa5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HBJ-Xg-UVR">
+                                <rect key="frame" x="229" y="338" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switch2:" destination="ENY-cH-o6A" eventType="valueChanged" id="fS9-TH-6Zx"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54I-03-Rim">
+                                <rect key="frame" x="33" y="208" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VTx-mF-FBm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <color key="textColor" red="0.72178819439999997" green="0.72178819439999997" blue="0.72178819439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZU-Ei-HbQ">
+                                <rect key="frame" x="33" y="309" width="100" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <color key="textColor" red="0.72178819439999997" green="0.72178819439999997" blue="0.72178819439999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NG3-pC-mJy">
+                                <rect key="frame" x="33" y="92" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7Om-UK-MSt"/>
+                                    <constraint firstAttribute="width" constant="46" id="V4j-rq-7ai"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -307,20 +351,34 @@
                                     <segue destination="EEo-C2-eDv" kind="push" id="HjW-zG-cC0"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XsW-yP-b5H">
-                                <rect key="frame" x="229" y="237" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switch:" destination="ENY-cH-o6A" eventType="valueChanged" id="3jF-Vm-igH"/>
-                                </connections>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NG3-pC-mJy" firstAttribute="leading" secondItem="54I-03-Rim" secondAttribute="leading" id="6OA-W5-oyH"/>
+                            <constraint firstItem="c6S-AT-3fx" firstAttribute="top" secondItem="XsW-yP-b5H" secondAttribute="top" id="8zJ-E4-Den"/>
+                            <constraint firstItem="54I-03-Rim" firstAttribute="top" secondItem="NG3-pC-mJy" secondAttribute="bottom" constant="86" id="AVL-Hq-lHV"/>
+                            <constraint firstItem="QZU-Ei-HbQ" firstAttribute="leading" secondItem="kin-zj-5OZ" secondAttribute="leading" id="Gxn-AM-Het"/>
+                            <constraint firstItem="QZU-Ei-HbQ" firstAttribute="trailing" secondItem="kin-zj-5OZ" secondAttribute="trailing" id="J3P-lW-Hjy"/>
+                            <constraint firstItem="kin-zj-5OZ" firstAttribute="leading" secondItem="6i7-VG-096" secondAttribute="leadingMargin" constant="17" id="JES-IR-vTp"/>
+                            <constraint firstItem="kin-zj-5OZ" firstAttribute="top" secondItem="c6S-AT-3fx" secondAttribute="bottom" constant="80" id="KZL-eB-NOe"/>
+                            <constraint firstItem="XsW-yP-b5H" firstAttribute="leading" secondItem="c6S-AT-3fx" secondAttribute="trailing" constant="96" id="Mz3-vD-Tnv"/>
+                            <constraint firstItem="c6S-AT-3fx" firstAttribute="leading" secondItem="kin-zj-5OZ" secondAttribute="leading" id="QH9-K5-ohn"/>
+                            <constraint firstItem="kin-zj-5OZ" firstAttribute="top" secondItem="QZU-Ei-HbQ" secondAttribute="bottom" constant="8" symbolic="YES" id="YBC-6I-Ls6"/>
+                            <constraint firstItem="NG3-pC-mJy" firstAttribute="top" secondItem="LK9-fY-665" secondAttribute="bottom" constant="48" id="djx-RF-wr6"/>
+                            <constraint firstItem="54I-03-Rim" firstAttribute="leading" secondItem="c6S-AT-3fx" secondAttribute="leading" id="jQ5-WQ-FmP"/>
+                            <constraint firstItem="c6S-AT-3fx" firstAttribute="trailing" secondItem="kin-zj-5OZ" secondAttribute="trailing" id="jTF-9h-5is"/>
+                            <constraint firstItem="QZU-Ei-HbQ" firstAttribute="top" secondItem="c6S-AT-3fx" secondAttribute="bottom" constant="51" id="mGL-CP-cYO"/>
+                            <constraint firstItem="Mkl-9T-qsI" firstAttribute="top" secondItem="kin-zj-5OZ" secondAttribute="bottom" constant="165" id="mhM-YE-jb2"/>
+                            <constraint firstItem="54I-03-Rim" firstAttribute="trailing" secondItem="c6S-AT-3fx" secondAttribute="trailing" id="nIw-Zh-q1g"/>
+                            <constraint firstItem="c6S-AT-3fx" firstAttribute="top" secondItem="54I-03-Rim" secondAttribute="bottom" constant="8" symbolic="YES" id="zmW-pC-ili"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uu7-b2-h8W"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="switchState" destination="XsW-yP-b5H" id="tsw-nw-O4l"/>
+                        <outlet property="switchState2" destination="HBJ-Xg-UVR" id="vqq-Z4-Pdd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lex-bT-N4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -421,6 +479,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sGj-Ep-Vhi"/>
+        <segue reference="HjW-zG-cC0"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -88,16 +88,33 @@ class ControlCenterController: UserViewController  {
     @IBAction func `switch`(sender: UISwitch) {
         
         if switchState.on {
-            sendPosition(100)
+            sendPosition(100) // d in ascii for arduino
             println("inside switch on")
         }
         else {
-            sendPosition(105)
+            sendPosition(105) // i in ascii for arduino
             println("inside switch off")
         }
     }
     
     
+    @IBOutlet weak var switchState2: UISwitch!
+    
+    
+    
+    @IBAction func switch2(sender: UISwitch) {
+        
+        if switchState2.on {
+            sendPosition(110) // n in ascii for arduino
+            println("inside switch on")
+        }
+        else {
+            sendPosition(115) // s in ascii for arduino
+            println("inside switch off")
+        }
+        
+        
+    }
     
     
     override func didReceiveMemoryWarning() {
